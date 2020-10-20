@@ -12,5 +12,4 @@ function setup() {
       storkeWeight(1);
     }
   }
-  }
 }
