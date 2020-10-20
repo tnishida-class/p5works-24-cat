@@ -8,8 +8,8 @@ function setup() {
     if(i < 4) {
       strokeWeight(2);
     }
-    else(i > 4) {
-      storkeWeight(1);
+    else {
+      strokeWeight(1);
     }
   }
 }
