@@ -1,4 +1,5 @@
 // ダーツ
+// 適当に円入れたら行けるかと思ったが...
 let cx, cy, maxR;
 
 function setup() {
@@ -6,10 +7,13 @@ function setup() {
   let red = color(255, 0, 0);
   let black = color(0);
   let cream = color(242, 212, 147);
+  // 変数で色を代入。書きやすくするためかな？
+
   createCanvas(400, 400);
   background(255);
   stroke(255);
   strokeWeight(3);
+  // いつもの。白線囲いは最初に指定するのか...
 
   cx = width / 2;
   cy = height / 2;
