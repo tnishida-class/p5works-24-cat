@@ -13,7 +13,7 @@ function setup() {
            fill(255, 0, 0);
            ellipse((size*i)+(size/2), (size*j)+(size/2), size);
          }
-        else if (j == 5, 7){
+        else if (j == 5 || j == 7){
            fill(0);
            ellipse((size*i)+(size/2), (size*j)+(size/2), size);
         }
@@ -21,11 +21,11 @@ function setup() {
       else if(i % 2 == 1 && j % 2 == 0){
         fill(196);
         rect(size*i, size*j, size, size);
-        if(i == 0, 2){
+        if(j == 0 || j == 2){
           fill(255, 0, 0);
           ellipse((size*i)+(size/2), (size*j)+(size/2), size);
         }
-        else if(i == 6){
+        else if(j == 6){
           fill(0);
           ellipse((size*i)+(size/2), (size*j)+(size/2), size);
         }
