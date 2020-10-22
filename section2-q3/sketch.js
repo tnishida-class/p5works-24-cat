@@ -15,13 +15,17 @@ function setup() {
   strokeWeight(3);
   // いつもの。白線囲いは最初に指定するのか...
 
-  cx = width / 2;
+  cx = width / 2; // circleのcかな
   cy = height / 2;
-  maxR = min(width, height);
+  maxR = min(width, height); // これなんだろ？
 
   drawCircle(black, maxR);
   drawArcs(green, red, maxR * 0.8);
+  drawArcs(cream, black, maxR * 0.75);
   // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
+  drawArcs(green, red, maxR * 0.5);
+  drawArcs(cream, black, maxR * 0.45);
+  drawCircle(green, maxR * 0.1);
   drawCircle(red, maxR * 0.05);
 }
 
