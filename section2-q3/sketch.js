@@ -42,3 +42,4 @@ function drawArcs(c1, c2, r) {
     arc(cx, cy, r, r, start, stop, PIE);
   }
 }
+ // なるほどこちらで書けるように揃えてくれていたのか
