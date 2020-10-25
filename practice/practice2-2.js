@@ -1,44 +1,17 @@
-// ダーツ
-// 適当に円入れたら行けるかと思ったが...
-let cx, cy, maxR;
-
-function setup() {
-  let green = color(0, 255, 0);
-  let red = color(255, 0, 0);
-  let black = color(0);
-  let cream = color(242, 212, 147);
-  // 変数で色を代入。書きやすくするためかな？
-
-  createCanvas(400, 400);
-  background(255);
-  stroke(255);
-  strokeWeight(3);
-  // いつもの。白線囲いは最初に指定するのか...
-
-  cx = width / 2; // circleのcかな
-  cy = height / 2;
-  maxR = min(width, height); // これなんだろ？
-
-  drawCircle(black, maxR);
-  drawArcs(green, red, maxR * 0.8);
-  drawArcs(cream, black, maxR * 0.75);
-  // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
-  drawArcs(green, red, maxR * 0.5);
-  drawArcs(cream, black, maxR * 0.45);
-  drawCircle(green, maxR * 0.1);
-  drawCircle(red, maxR * 0.05);
-}
-
-function drawCircle(c, r){
-  fill(c);
-  ellipse(cx, cy, r, r);
-}
-
-function drawArcs(c1, c2, r) {
-  for (let i = 0; i < 20; i++) {
-    let start = TWO_PI / 20 * i;
-    let stop = TWO_PI / 20 * (i + 1);
-    fill(i % 2 == 0 ? c1 : c2);
-    arc(cx, cy, r, r, start, stop, PIE);
+function setup(){
+  createCanvas(270, 180);
+  fill(0);
+  let h = height / 13;
+  for(let i = 0; i < 13; i++){
+    if(i % 2 == 0){
+      fill(255, 0, 0)
+      rect(0, i * h, width, h);
+    }
+    else{
+      fill(255);
+      rect(0, i * h, width, h);
+    }
   }
+  fill(0, 0, 255)
+  rect(0, 0, width * 3 / 7, 7 * h);
 }
