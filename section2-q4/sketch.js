@@ -29,6 +29,7 @@ function setup() {
   // BLANK[2] (hint: 白い十字を描くには rect を二つ描こう)
 }
 
+
 // アメリカの国旗途中
 function setup(){
   createCanvas(270, 180);
