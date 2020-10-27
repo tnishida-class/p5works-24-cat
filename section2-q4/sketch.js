@@ -35,6 +35,7 @@ function setup(){
   createCanvas(270, 180);
   fill(0);
   let h = height / 13;
+  noStroke();
   for(let i = 0; i < 13; i++){
     if(i % 2 == 0){
       fill(255, 0, 0)
