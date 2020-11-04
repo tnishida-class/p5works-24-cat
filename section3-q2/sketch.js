@@ -12,6 +12,11 @@ function kobeCity(x, y, size){
   strokeWeight(size * 0.25);
   strokeCap(SQUARE);
   arc(x + size * 0.25, y, size, size, QUARTER_PI * 3, QUARTER_PI * 3 + PI);
+  // arc(x, y, size, size, QUARTER_PI * 3, QUARTER_PI * 3 + PI);
+  // これでも特に問題無いから，中心のx座標は見やすいように付け足しただけかな？
+  // いや違うわ。なんで0．25倍すればいいって分かったのだ？
+  arc(x - size * 0.25, y, size, size, QUARTER_PI + PI, QUARTER_PI + TWO_PI);
+  // arc(x, y, size, size, QUARTER_PI + PI, QUARTER_PI + TWO_PI);
   // BLANK[1]
   pop();
 }
