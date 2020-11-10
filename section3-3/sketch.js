@@ -1,7 +1,8 @@
 // テキスト「関数を作る(2) 値を戻す関数」～「総仕上げ：カレンダーを描画しよう」
 function setup(){
   createCanvas(500, 500);
-  calendar(2019, 10);
+  calendar(2020, 11);
+  // text(dayOfWeek(1981, 7, 17), 100, 100);
 
   for(let i = 2000; i <= 2100; i++){
     if(isLeapYear(i)){
@@ -14,36 +15,13 @@ function setup(){
 }
 
 function calendar(y, m){
-  text("y年 m月", width / 3, 25); // yとmを引数で表示するにはどうすれば？
+  text(y, width / 3, 25);
+  text(m, width / 2, 25); // yとmを引数で表示するにはどうすれば？
   let dow = dayOfWeek(y, m, 1);
-  for(let i = 0; i < 35; i++){
-    if(i % 7 == 0){
-      text("日", width / 35 * i, 50);
-    }
-    else if(i % 7 == 1){
-      text("月", width / 35 * i, 50);
-    }
-    else if(i % 7 == 2){
-      text("火", width / 35 * i, 50);
-    }
-    else if(i % 7 == 3){
-      text("水", width / 35 * i, 50);
-    }
-    else if(i % 7 == 4){
-      text("木", width / 35 * i, 50);
-    }
-    else if(i % 7 == 5){
-      text("金", width / 35 * i, 50);
-    }
-    else if(i % 7 == 6){
-      text("土", width / 35 * i, 50);
-    }
-  }
-  for(let d = 1; d <= daysInMonth(y, m); d++){
+  for(let d = 0; d < daysInMonth(y, m); d++){
     // BLANK[3] (hint: まずは daysInYear, dayOfWeek を作ろう)
-    if(dow == 0){
-      text("d", width / 14 * d, height / 2);
-    }
+    text(dayOfWeekAsString(d), width / 15 * d, 50);
+    text(d + 1, (width / 15 * dow) + (width / 15 * (d % 7)) , Math.floor(d / 7) * 10 + 65);
   }
 }
 
@@ -81,18 +59,23 @@ function dayOfYear(y, m, d){ // ある年における日にち
   return count + d;
 }
 
-function dayOfWeek(y, m, d){ // ある週における日にち
+function dayOfWeek(y, m, d){ // ある週における日にち これ多分間違ってる
   // BLANK[2]
-  const ys = 1970 // s : year standard 1970.01.01(Thu.)
   let count = 0;
-  for(i = 1970; i < y; i++){
+  if(y >= 1971){
+    for(i = 1971; i <= y; i++){
     count + daysInYear(i);
-  }
   let ds = count + dayOfYear(y, m, d); // ds = day sum
-    return ds % 7 + 3;
+    return ds % 7;
   }
+}
+  else{
+    let ds = count + dayOfYear(1970, m, d);
+  }
+}
 
 function dayOfWeekAsString(dow){
-  const a = ["日", "月", "火", "水", "木", "金", "土", "日"];
+  const a = ["火", "水", "木", "金", "土", "日", "月", "火", "水", "木", "金", "土", "日", "月"];
+  // 最終的に個々の文字列をイジったらできた。なんでだ？
   return a[dow];
 }
