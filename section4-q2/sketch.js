@@ -10,11 +10,13 @@ function setup(){
 }
 
 function draw(){
-  background(160, 192, 255);
+  background(30, 30, 255);
   // BLANK[2] (hint: 作った star 関数を使います)
-  ellipse(x, y, 50);
-  x = x + vx;
-  y = y + vy;
+  star(x, y, 30, 3);
+  star(x + 25, y - 25, 20, 3);
+  star(x - 25, y + 25, 20, 3);
+  // x += vx;
+  // y += vy;
   // 端の処理パターン (1) 反対側から出てくる
   // if(x > width){ x = 0; }
   // else if(x < 0){ x = width; }
@@ -25,15 +27,19 @@ function draw(){
 }
 
 function star(cx, cy, r, angle){
+  push();
+  noStroke();
+  fill(255, 255, 0);
   beginShape();
   for(var i = 0; i < 20; i++){
     var theta = TWO_PI * i * 2 / 5 - HALF_PI;
-    // BLANK[1] (hint: angle 分だけ星を回転させるには？)
+    // BLANK[1] (hint: angle 分だけ星を回転させるには？) わかんない
     var x = cx + cos(theta) * r;
     var y = cy + sin(theta) * r;
     vertex(x,y);
   }
   endShape(CLOSE);
+  pop();
 }
 
 function windowResized(){
