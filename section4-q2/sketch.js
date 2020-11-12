@@ -12,12 +12,16 @@ function setup(){
 function draw(){
   background(160, 192, 255);
   // BLANK[2] (hint: 作った star 関数を使います)
-
+  ellipse(x, y, 50);
+  x = x + vx;
+  y = y + vy;
   // 端の処理パターン (1) 反対側から出てくる
-  if(x > width){ x = 0; }
-  else if(x < 0){ x = width; }
-  if(y > height){ y = 0; }
-  if(y < 0){ y = height; }
+  // if(x > width){ x = 0; }
+  // else if(x < 0){ x = width; }
+  // if(y > height){ y = 0; }
+  // if(y < 0){ y = height; }
+  x = x % width;
+  y = y % height;
 }
 
 function star(cx, cy, r, angle){
