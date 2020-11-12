@@ -13,11 +13,12 @@ function draw(){
   count = (count + 1) % cycle;
   // BLANK[1]
   let size;
-  if(count < cycle / 2){
-    size = count;
-  }
-  else{
-    size = cycle - count;
-  }
+  // if(count < cycle / 2){
+  //   size = count;
+  // }
+  // else{
+  //   size = cycle - count;
+  // }
+  size = constrain(count, 50, 70);
   ellipse(width / 2, height / 2, size);
 }
