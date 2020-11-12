@@ -18,6 +18,7 @@ function calendar(y, m){
   text(y, width / 3, 25);
   text(m, width / 2, 25); // yとmを引数で表示するにはどうすれば？
   let dow = dayOfWeek(y, m, 1);
+  console.log(dayOfWeekAsString(dow)); // consoleで確認できる
   for(let d = 0; d < daysInMonth(y, m); d++){
     // BLANK[3] (hint: まずは daysInYear, dayOfWeek を作ろう)
     text(dayOfWeekAsString(d), width / 15 * d, 50);
@@ -60,22 +61,22 @@ function dayOfYear(y, m, d){ // ある年における日にち
 }
 
 function dayOfWeek(y, m, d){ // ある週における日にち これ多分間違ってる
-  // BLANK[2]
+  // BLANK[2] 1970. 01. 01. (Thu.)
   let count = 0;
+  let ds;
   if(y >= 1971){
-    for(i = 1971; i <= y; i++){
-    count + daysInYear(i);
-  let ds = count + dayOfYear(y, m, d); // ds = day sum
-    return ds % 7;
+    for(i = 1970; i < y; i++){
+    count = count + daysInYear(i);
+    }
+    ds = count + dayOfYear(y, m, d); // ds = day sum
   }
-}
   else{
-    let ds = count + dayOfYear(1970, m, d);
+    ds = count + dayOfYear(1970, m, d);
   }
+  return ds % 7;
 }
 
 function dayOfWeekAsString(dow){
-  const a = ["火", "水", "木", "金", "土", "日", "月", "火", "水", "木", "金", "土", "日", "月"];
-  // 最終的に個々の文字列をイジったらできた。なんでだ？
+  const a = ["水", "木", "金", "土", "日", "月", "火", "水", "木", "金", "土", "日", "月", "火"];
   return a[dow];
 }
