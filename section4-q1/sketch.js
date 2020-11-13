@@ -20,5 +20,6 @@ function draw(){
   //   size = cycle - count;
   // }
   size = constrain(count, 50, 70);
+  fill(0, 0, 255)
   ellipse(width / 2, height / 2, size);
 }

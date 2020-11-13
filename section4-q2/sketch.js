@@ -34,6 +34,8 @@ function star(cx, cy, r, angle){
   for(var i = 0; i < 20; i++){
     var theta = TWO_PI * i * 2 / 5 - HALF_PI;
     // BLANK[1] (hint: angle 分だけ星を回転させるには？) わかんない
+    var angle = angle / 180 * PIE;
+    theta += angle;
     var x = cx + cos(theta) * r;
     var y = cy + sin(theta) * r;
     vertex(x,y);
