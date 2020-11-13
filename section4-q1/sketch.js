@@ -9,7 +9,7 @@ function setup(){
 }
 
 function draw(){
-  background(160, 192, 255);
+  background(200, 200, 0);
   count = (count + 1) % cycle;
   // BLANK[1]
   let size;
@@ -20,6 +20,6 @@ function draw(){
   //   size = cycle - count;
   // }
   size = constrain(count, 50, 70);
-  fill(0, 0, 255)
+  fill(255, 0, 0)
   ellipse(width / 2, height / 2, size);
 }
