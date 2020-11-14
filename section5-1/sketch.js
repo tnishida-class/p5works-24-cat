@@ -5,10 +5,15 @@ function setup(){
 
   let scores = [];
   for(let i = 0; i < 10; i++){
-    scores[i] = random(20, 100); // 60以上100未満のランダムな数を代入
+    scores[i] = random(20, 100); // 20以上100未満のランダムな数を代入
   }
   console.log(scores);
   barchart(scores);
+  let r = [2, 4, 5, 93, 9, 29];
+  console.log(average(r));
+  console.log(average(scores))
+  console.log(largest(r));
+  console.log(smallest(r))
 }
 
 // テキスト「配列と繰り返し」
@@ -16,25 +21,44 @@ function sum(arr){
   let n = 0;
   for(let i = 0; i < arr.length; i++){ n += arr[i]; }
   return n;
+  console.log(n);
 }
 
-//　テキスト「配列と繰り返し」練習問題
+//　テキスト「配列と繰り返し」練習問題 配列に含まれる値の平均値を求める
 function average(arr){
   // BLANK[1]
+  let n = 0;
+  for(let i = 0; i < arr.length; i++){
+    n += arr[i];
+  }
+  return(n);
 }
 
-function largest(arr){
+function largest(arr){ // 配列に含まれる値のうちの最大値を返す
   let n = 0;
   for(let i = 0; i < arr.length; i++){
     // BLANK[2]
+    if(arr[i] > n){
+      n = arr[i];
+    }
+    else{
+      n = n;
+    }
   }
   return n;
+  console.log(n);
 }
 
-function smallest(arr){
+function smallest(arr){ // 配列に含まれる値のうちの最小値を返す
   let n = 100;
   for(let i = 0; i < arr.length; i++){
     // BLANK[3]
+    if(arr[i] < n){
+      n = arr[i];
+    }
+    else{
+      n = n;
+    }
   }
   return n;
 }
