@@ -10,10 +10,7 @@ function setup(){
   console.log(scores);
   barchart(scores);
   let r = [2, 4, 5, 93, 9, 29];
-  console.log(average(r));
   console.log(average(scores))
-  console.log(largest(r));
-  console.log(smallest(r))
 }
 
 // テキスト「配列と繰り返し」
@@ -63,10 +60,13 @@ function smallest(arr){ // 配列に含まれる値のうちの最小値を返�
   return n;
 }
 
-// テキスト「配列を使った描画」棒グラフ
+// テキスト「配列を使った描画」棒グラフ まだ合ってない
 function barchart(scores){
   scaleY(10);
   // BLANK[4] (hint: largest, smallest, average を使って先にそれぞれの値を計算しておきます)
+  console.log(largest(scores));
+  console.log(smallest(scores));
+  console.log(average(scores));
 
   noStroke();
 
@@ -74,12 +74,26 @@ function barchart(scores){
     const dx = width / scores.length;
     const h = height * scores[i] / 100;
     // BLANK[5] (hint: 条件分岐を使って色を変更します)
+    if(scores[i] = largest(scores)){ // 合っていると思うのだが，全部これで反映される　理由分からん
+      fill(255, 0, 0);
+      rect(i * dx + 2, height - h, dx - 4, h);　// rectは多分OK
+      text(scores[i].toPrecision(3), i * dx, height - h)
+    }
+    else if(scores[i] = smallest(scores)){
+      fill(0, 0, 255);
+      rect(i * dx + 2, height - h, dx - 4, h);
+      text(scores[i].toPrecision(3), i * dx, height - h)
+    }
+    else{
     rect(i * dx + 2, height - h, dx - 4, h);
     fill(0);
     text(scores[i].toPrecision(3), i * dx, height - h);
   }
-
+  }
   // BLANK[6] (hint: 平均点の線を引きます)
+  fill(255, 255, 0);
+  line(0, height - average(scores), width, height - average(scores));
+  // 線も引けん
 }
 
 function scaleY(n){
