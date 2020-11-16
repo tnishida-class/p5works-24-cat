@@ -9,8 +9,6 @@ function setup(){
   }
   console.log(scores);
   barchart(scores);
-  let r = [2, 4, 5, 93, 9, 29];
-  console.log(average(scores))
 }
 
 // テキスト「配列と繰り返し」
@@ -28,6 +26,7 @@ function average(arr){
   for(let i = 0; i < arr.length; i++){
     n += arr[i];
   }
+  n = n / arr.length;
   return(n);
 }
 
@@ -64,35 +63,44 @@ function smallest(arr){ // 配列に含まれる値のうちの最小値を返�
 function barchart(scores){
   scaleY(10);
   // BLANK[4] (hint: largest, smallest, average を使って先にそれぞれの値を計算しておきます)
-  console.log(largest(scores));
-  console.log(smallest(scores));
-  console.log(average(scores));
+  let l = largest(scores);
+  let s = smallest(scores);
+  let a = average(scores);
+  console.log(l);
+  console.log(s);
+  console.log(a);
 
   noStroke();
 
   for(let i = 0; i < scores.length; i++){
     const dx = width / scores.length;
     const h = height * scores[i] / 100;
+    fill(0);
     // BLANK[5] (hint: 条件分岐を使って色を変更します)
-    if(scores[i] = largest(scores)){ // 合っていると思うのだが，全部これで反映される　理由分からん
+    if(scores[i] == l){ // 合っていると思うのだが，全部これで反映される　理由分からん
+      push();
       fill(255, 0, 0);
       rect(i * dx + 2, height - h, dx - 4, h);　// rectは多分OK
       text(scores[i].toPrecision(3), i * dx, height - h)
+      pop();
     }
-    else if(scores[i] = smallest(scores)){
+    else if(scores[i] == s){
+      push();
       fill(0, 0, 255);
       rect(i * dx + 2, height - h, dx - 4, h);
       text(scores[i].toPrecision(3), i * dx, height - h)
+      pop();
     }
     else{
     rect(i * dx + 2, height - h, dx - 4, h);
-    fill(0);
     text(scores[i].toPrecision(3), i * dx, height - h);
   }
   }
   // BLANK[6] (hint: 平均点の線を引きます)
-  fill(255, 255, 0);
-  line(0, height - average(scores), width, height - average(scores));
+  stroke(0, 255, 255);
+  line(0, height - height * a / 100, width, height - height * a / 100);
+  fill(0);
+  text(a.toPrecision(3), 0, height - height * a / 100)
   // 線も引けん
 }
 
