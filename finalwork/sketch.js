@@ -6,11 +6,11 @@ function preload(){
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
+  image(img1, width / 2, height / 2);
 }
 
 function draw(){
   background(160, 192, 255);
-  image(img1, width / 2, height / 2);
 }
 
 function windowResized(){
