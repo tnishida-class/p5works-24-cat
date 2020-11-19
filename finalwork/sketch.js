@@ -119,7 +119,11 @@ function arrow(x, y){ // ? / 20 ずつふやしていけばよさそう
 function KeyPressed(){ // 反応しない，drawと変数を対応させないとダメなのかな
   // KeyPressed();をdrawに置いたらできた。
   if(key == "a"){
-    // 四角Aにもなんか処理したい
+    push();
+    fill(0);
+    textSize(height / 30);
+    text("A, B, C 以外のキーを離すと元に戻るよ", width / 2, height / 10 * 9);
+    pop();
     push();
     fill(255, 255, 0);
     stroke(255, 255, 0);
@@ -135,6 +139,11 @@ function KeyPressed(){ // 反応しない，drawと変数を対応させない�
   }
   else if(key == "b"){
     push();
+    fill(0);
+    textSize(height / 30);
+    text("A, B, C 以外のキーを離すと元に戻るよ", width / 2, height / 10 * 9);
+    pop();
+    push();
     fill(0, 100, 255);
     stroke(0, 100, 255);
     arrow(width / 20 * 3, height / 2);
@@ -149,6 +158,11 @@ function KeyPressed(){ // 反応しない，drawと変数を対応させない�
     pop();
   }
   else if(key == "c"){
+    push();
+    fill(0);
+    textSize(height / 30);
+    text("A, B, C 以外のキーを離すと元に戻るよ", width / 2, height / 10 * 9);
+    pop();
     push();
     fill(150, 0, 255);
     stroke(150, 0, 255);
