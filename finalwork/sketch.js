@@ -31,9 +31,6 @@ function draw(){
   image(img1, width / 4 * 1, 0, width / 10, height / 5); // eye
   image(img2, width / 4 * 1, height / 5 * 2, width / 10, height / 5); // ear
   image(img3, width / 4 * 1, height / 5 * 4, width / 10, height / 5); // nose
-  image(img4, 0, 0, width / 10, height / 5); // sun
-  image(img5, 0, height / 5 * 2, width / 10, height / 5); // speaker
-  image(img6, 0, height / 5 * 4, width / 10, height / 5); // food
   image(img7, width / 3 * 2, height / 8 * 1, width / 3, height / 4 * 3); // brain
   // 画像の挿入
   line(width / 20 * 7, height / 10, width / 100 * 95, height / 2); // eye
@@ -123,6 +120,7 @@ function arrow(x, y){ // 矢印はこれで
 function KeyPressed(){ // キーを押したらこんな風に動く
   if(key == "a"){　// aを押した場合
     push();
+    image(img4, 0, 0, width / 10, height / 5); // sun
     fill(0);
     textSize(height / 30);
     text("A, B, C 以外のキーを離すと元に戻るよ", width / 2, height / 10 * 9);
@@ -142,6 +140,7 @@ function KeyPressed(){ // キーを押したらこんな風に動く
   }
   else if(key == "b"){ // bを押した場合
     push();
+    image(img5, 0, height / 5 * 2, width / 10, height / 5); // speaker
     fill(0);
     textSize(height / 30);
     text("A, B, C 以外のキーを離すと元に戻るよ", width / 2, height / 10 * 9);
@@ -162,6 +161,7 @@ function KeyPressed(){ // キーを押したらこんな風に動く
   }
   else if(key == "c"){ // cを押した場合
     push();
+    image(img6, 0, height / 5 * 4, width / 10, height / 5); // food
     fill(0);
     textSize(height / 30);
     text("A, B, C 以外のキーを離すと元に戻るよ", width / 2, height / 10 * 9);
