@@ -73,7 +73,7 @@ function draw(){
     stroke(0);
     fill(0);
     textSize(height / 30);
-    text("神経の興奮でも感覚は生じる", width / 3 * 2, height / 8 * 2);
+    text("神経の興奮でも感覚は生じる", width / 8 * 5, height / 2);
     text("特殊神経エネルギー説", width / 6 * 5 , height / 60 * 59);
     pop();
   }
@@ -89,7 +89,7 @@ function draw(){
     stroke(0);
     fill(0);
     textSize(height / 30);
-    text("神経の興奮でも感覚は生じる", width / 3 * 2, height / 8 * 2);
+    text("神経の興奮でも感覚は生じる", width / 2, height / 5 * 4);
     text("特殊神経エネルギー説", width / 6 * 5 , height / 60 * 59);
     pop();
   }
