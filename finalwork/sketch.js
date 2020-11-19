@@ -1,5 +1,6 @@
 // 最終課題を制作しよう
 // text("特殊神経エネルギー説", width / 6 * 5 , height / 60 * 59)
+// リンク　https://tnishida-class.github.io/p5works-24-cat/finalwork/index.html
 let img1, img2, img3, img4, img5;
 function preload(){
   img1 = loadImage('Eye.png');
