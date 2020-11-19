@@ -155,7 +155,7 @@ function KeyPressed(){ // 反応しない，drawと変数を対応させない�
     arrow(width / 20 * 3, height / 10 * 9);
     ellipse(width / 40 * 21, height / 10 * 7, height / 10); // nose
     textSize(height / 30);
-    text("嗅覚in大脳？？？", width / 100 * 65, height / 2);
+    text("嗅覚in大脳辺縁系", width / 100 * 65, height / 2);
     strokeWeight(10);
     stroke(0);
     textSize(height / 30);
