@@ -58,7 +58,7 @@ function draw(){
     fill(0);
     textSize(height / 30);
     text("神経の興奮でも感覚は生じる", width / 3 * 2, height / 8 * 2);
-    text("特殊神経エネルギー説", width / 6 * 5 , height / 60 * 59);
+    text("特殊神経エネルギー説", width / 6 * 4 , height / 60 * 59);
     pop();
   }
   if(x > w / 8 * 5 - h / 20 && x < w / 8 * 5 + h / 20 && y > h / 12 * 5 - h / 20 && y < h / 12 * 5 + h / 20){
@@ -74,7 +74,7 @@ function draw(){
     fill(0);
     textSize(height / 30);
     text("神経の興奮でも感覚は生じる", width / 8 * 5, height / 2);
-    text("特殊神経エネルギー説", width / 6 * 5 , height / 60 * 59);
+    text("特殊神経エネルギー説", width / 6 * 4 , height / 60 * 59);
     pop();
   }
   if(x > w / 40 * 21 - h / 20 && x < w / 40 * 21 + h / 20 && y > h / 10 * 7 - h / 20 && y < h / 10 * 7 + h / 20){
@@ -90,7 +90,7 @@ function draw(){
     fill(0);
     textSize(height / 30);
     text("神経の興奮でも感覚は生じる", width / 2, height / 5 * 4);
-    text("特殊神経エネルギー説", width / 6 * 5 , height / 60 * 59);
+    text("特殊神経エネルギー説", width / 6 * 4 , height / 60 * 59);
     pop();
   }
 }
