@@ -27,10 +27,10 @@ function draw(){
   text("C", 0, height / 5 * 4 + height / 40);
   pop();
   // テキスト入れ込み，push();pop();は余計な混じり込みを防ぐためこの後も随所に入れている
-  image(img1, width / 4 * 1, 0, width / 10, height / 5); // eye
-  image(img2, width / 4 * 1, height / 5 * 2, width / 10, height / 5); // ear
-  image(img3, width / 4 * 1, height / 5 * 4, width / 10, height / 5); // nose
-  image(img7, width / 3 * 2, height / 8 * 1, width / 3, height / 4 * 3); // brain
+  image(img1, width / 4 * 1, 0, width / 10, height / 5); // Eye
+  image(img2, width / 4 * 1, height / 5 * 2, width / 10, height / 5); // Ear
+  image(img3, width / 4 * 1, height / 5 * 4, width / 10, height / 5); // Nose
+  image(img7, width / 3 * 2, height / 8 * 1, width / 3, height / 4 * 3); // Brain
   // 画像の挿入
   line(width / 20 * 7, height / 10, width / 100 * 95, height / 2); // eye
   line(width / 20 * 7, height / 2, width / 100 * 90, height / 3); // ear
@@ -119,7 +119,7 @@ function arrow(x, y){ // 矢印はこれで
 function KeyPressed(){ // キーを押したらこんな風に動く
   if(key == "a"){　// aを押した場合
     push();
-    image(img4, 0, 0, width / 10, height / 5); // sun
+    image(img4, 0, 0, width / 10, height / 5); // Sun
     fill(0);
     textSize(height / 30);
     text("A, B, C 以外のキーを離すと元に戻るよ", width / 2, height / 10 * 9);
@@ -128,7 +128,7 @@ function KeyPressed(){ // キーを押したらこんな風に動く
     fill(255, 255, 0);
     stroke(255, 255, 0);
     arrow(width / 20 * 3, height / 10); //
-    stimulation(width / 20 * 13, height / 10 * 3, height / 10); // eye
+    stimulation(width / 20 * 13, height / 10 * 3, height / 10); // Eye
     textSize(height / 30);
     text("視覚in後頭葉", width / 100 * 90, height / 2);
     strokeWeight(10);
@@ -139,7 +139,7 @@ function KeyPressed(){ // キーを押したらこんな風に動く
   }
   else if(key == "b"){ // bを押した場合
     push();
-    image(img5, 0, height / 5 * 2, width / 10, height / 5); // speaker
+    image(img5, 0, height / 5 * 2, width / 10, height / 5); // Speaker
     fill(0);
     textSize(height / 30);
     text("A, B, C 以外のキーを離すと元に戻るよ", width / 2, height / 10 * 9);
@@ -148,7 +148,7 @@ function KeyPressed(){ // キーを押したらこんな風に動く
     fill(0, 100, 255);
     stroke(0, 100, 255);
     arrow(width / 20 * 3, height / 2);
-    stimulation(width / 8 * 5, height / 12 * 5, height / 10); // ear
+    stimulation(width / 8 * 5, height / 12 * 5, height / 10); // Ear
     textSize(height / 30);
     text("聴覚in側頭葉", width / 100 * 85, height / 3);
     textSize(height / 30);
@@ -160,7 +160,7 @@ function KeyPressed(){ // キーを押したらこんな風に動く
   }
   else if(key == "c"){ // cを押した場合
     push();
-    image(img6, 0, height / 5 * 4, width / 10, height / 5); // food
+    image(img6, 0, height / 5 * 4, width / 10, height / 5); // Food
     fill(0);
     textSize(height / 30);
     text("A, B, C 以外のキーを離すと元に戻るよ", width / 2, height / 10 * 9);
@@ -169,7 +169,7 @@ function KeyPressed(){ // キーを押したらこんな風に動く
     fill(0, 100, 100);
     stroke(0, 100, 100);
     arrow(width / 20 * 3, height / 10 * 9);
-    stimulation(width / 40 * 21, height / 10 * 7, height / 10); // nose
+    stimulation(width / 40 * 21, height / 10 * 7, height / 10); // Nose
     textSize(height / 30);
     text("嗅覚in大脳辺縁系", width / 100 * 65, height / 2);
     strokeWeight(10);
