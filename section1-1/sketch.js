@@ -1,17 +1,18 @@
-function setup() {
-  createCanvas(128,128);
+let img1, img2;
+function preload(){
+  img1 = loadImage('cat.jpg');
+  img2 = loadImage('man.png');
 }
 
-function draw() {
-  background(0);
-  strokeWeight(4);
+function setup(){
+  createCanvas(windowWidth, windowHeight);
+}
 
-  fill(278, 138, 122);
-  triangle(12,120,116,120,116,10);
-  fill(94, 185, 84);
-  triangle(0,108,106,108,106,0);
-  fill(123, 242, 98);
-  textSize(32);
-  textFont("serif");
-  text("46", 68, 100);
+function widowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+function draw(){
+  image(img1, width / 7, height / 5, height / 5 * 2, height / 5 * 2);
+  image(img2, width / 7 * 4, height / 5, height / 5 * 2, height / 5 * 2);
 }
