@@ -39,11 +39,12 @@ function draw(){
 }
 
 function keyPressed(){
-  if(key == "a"){
+  if(key == "a"){ // 配列使いたい
     push();
     fill(0);
     rect(width / 7, height / 5 * 3, width / 7, height / 10);
-    stroke(255);
+    fill(255);
+    strokeWeight(5);
     text("   A: 乱れひっかき", width / 7, height / 5 * 3 + height / 30 * 2);
     pop();
   }
@@ -54,6 +55,24 @@ function keyPressed(){
     fill(255);
     strokeWeight(5);
     text("   B: ネコのいかり", width / 7 * 2, height / 5 * 3 + height / 30 * 2);
+    pop();
+  }
+  else if(key == "c"){
+    push();
+    fill(0);
+    rect(width / 7, height / 10 * 7, width / 7, height / 10);
+    fill(255);
+    strokeWeight(5);
+    text("  C: はかいこうせん", width / 7, height / 10 * 7  + height / 30 * 2);
+    pop();
+  }
+  else if(key == "d"){
+    push();
+    fill(0);
+    rect(width / 7 * 2, height / 10 * 7, width / 7, height / 10);
+    fill(255);
+    strokeWeight(5);
+    text("   D: ねこぱんち", width / 7 * 2, height / 10 * 7 + height / 30 * 2);
     pop();
   }
 }
