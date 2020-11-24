@@ -28,17 +28,21 @@ function draw(){
   line(width / 7 * 5, height / 5 * 3, width / 7 * 5, height / 5 * 4);
   textSize(height / 30)
   text("   A: 乱れひっかき", width / 7, height / 5 * 3 + height / 30 * 2); // cat skill
-  text("   B: ネコのいかり", width / 7 * 2, height / 5 * 3 + height / 30 * 2);
+  text("   B: なきごえ", width / 7 * 2, height / 5 * 3 + height / 30 * 2);
   text("  C: はかいこうせん", width / 7, height / 10 * 7  + height / 30 * 2);
   text("   D: ねこぱんち", width / 7 * 2, height / 10 * 7 + height / 30 * 2);
-  text("   E: 正論", width / 7 * 4, height / 5 * 3 + height / 30 * 2); // man skill
-  text("  F: 冷静な切り返し", width / 7 * 5, height / 5 * 3 + height / 30 * 2);
-  text("  G: はかいこうせん", width / 7 * 4, height / 10 * 7  + height / 30 * 2);
-  text("  H: 銃撃", width / 7 * 5, height / 10 * 7 + height / 30 * 2);
+  text("   E: たたきつける", width / 7 * 4, height / 5 * 3 + height / 30 * 2); // man skill
+  text("  F: つきかえす", width / 7 * 5, height / 5 * 3 + height / 30 * 2);
+  text("   G: はたく", width / 7 * 4, height / 10 * 7  + height / 30 * 2);
+  text("  H: はかいこうせん", width / 7 * 5, height / 10 * 7 + height / 30 * 2);
   keyPressed();
 }
 
 function keyPressed(){
+  let hitpointA = 8; // att def agi とかも入れたら計算複雑にできるのでは？増減もできそう
+  let hitpointB = 12;
+  let attackA = 5;
+  let attackB = 3;
   if(key == "a"){ // 配列使いたい
     push();
     fill(0);
@@ -47,6 +51,7 @@ function keyPressed(){
     strokeWeight(5);
     text("   A: 乱れひっかき", width / 7, height / 5 * 3 + height / 30 * 2);
     pop();
+
   }
   else if(key == "b"){
     push();
@@ -54,7 +59,7 @@ function keyPressed(){
     rect(width / 7 * 2, height / 5 * 3, width / 7, height / 10);
     fill(255);
     strokeWeight(5);
-    text("   B: ネコのいかり", width / 7 * 2, height / 5 * 3 + height / 30 * 2);
+    text("   B: なきごえ", width / 7 * 2, height / 5 * 3 + height / 30 * 2);
     pop();
   }
   else if(key == "c"){
@@ -75,7 +80,45 @@ function keyPressed(){
     text("   D: ねこぱんち", width / 7 * 2, height / 10 * 7 + height / 30 * 2);
     pop();
   }
+  else if(key == "e"){
+    push();
+    fill(0);
+    rect(width / 7 * 4, height / 5 * 3, width / 7, height / 10);
+    fill(255);
+    strokeWeight(5);
+    text("   E: たたきつける", width / 7 * 4, height / 5 * 3 + height / 30 * 2);
+    pop();
+  }
+  else if(key == "f"){
+    push();
+    fill(0);
+    rect(width / 7 * 5, height / 5 * 3, width / 7, height / 10);
+    fill(255);
+    strokeWeight(5);
+    text("  F: つきかえす", width / 7 * 5, height / 5 * 3 + height / 30 * 2);
+    pop();
+  }
+  else if(key == "g"){
+    push();
+    fill(0);
+    rect(width / 7 * 4, height / 10 * 7, width / 7, height / 10);
+    fill(255);
+    strokeWeight(5);
+    text("   G: はたく", width / 7 * 4, height / 10 * 7  + height / 30 * 2);
+    pop();
+  }
+  else if(key == "h"){
+    push();
+    fill(0);
+    rect(width / 7 * 5, height / 10 * 7, width / 7, height / 10);
+    fill(255);
+    strokeWeight(5);
+    text("  H: はかいこうせん", width / 7 * 5, height / 10 * 7 + height / 30 * 2);
+    pop();
+  }
 }
+text("  F: つきかえす", width / 7 * 5, height / 5 * 3 + height / 30 * 2);
+text("   G: はたく", width / 7 * 4, height / 10 * 7  + height / 30 * 2);
 
 function arrow(x, y){ // 矢印はこれで
   beginShape();
