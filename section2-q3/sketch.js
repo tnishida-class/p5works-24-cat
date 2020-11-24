@@ -1,4 +1,5 @@
 // ダーツ
+// 適当に円入れたら行けるかと思ったが...
 let cx, cy, maxR;
 
 function setup() {
@@ -6,18 +7,25 @@ function setup() {
   let red = color(255, 0, 0);
   let black = color(0);
   let cream = color(242, 212, 147);
+  // 変数で色を代入。書きやすくするためかな？
+
   createCanvas(400, 400);
   background(255);
   stroke(255);
   strokeWeight(3);
+  // いつもの。白線囲いは最初に指定するのか...
 
-  cx = width / 2;
+  cx = width / 2; // circleのcかな
   cy = height / 2;
-  maxR = min(width, height);
+  maxR = min(width, height); // これなんだろ？
 
   drawCircle(black, maxR);
   drawArcs(green, red, maxR * 0.8);
+  drawArcs(cream, black, maxR * 0.75);
   // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
+  drawArcs(green, red, maxR * 0.5);
+  drawArcs(cream, black, maxR * 0.45);
+  drawCircle(green, maxR * 0.1);
   drawCircle(red, maxR * 0.05);
 }
 
@@ -34,3 +42,5 @@ function drawArcs(c1, c2, r) {
     arc(cx, cy, r, r, start, stop, PIE);
   }
 }
+ // なるほどこちらで書けるように揃えてくれていたのか
+ // 読めんな
